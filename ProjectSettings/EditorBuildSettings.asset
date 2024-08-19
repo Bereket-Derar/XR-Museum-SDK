@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Scene VR.unity
+    guid: 37ff5fd14c960bc4bb4d30ff37b852fd
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dc722118ab0a169469cd7d4adac859e6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 36a3b331281bad74696fe85aa577c8d6, type: 2}
