@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Oculus.Interaction;
+using System.Collections;
 using Oculus.Interaction.HandGrab;
 public class MetaCubeSceneSwitcher : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class MetaCubeSceneSwitcher : MonoBehaviour
         HandGrabInteractor handGrabInteractor = other.GetComponentInParent<HandGrabInteractor>();
         if (handGrabInteractor != null)
         {
-            LoadNextScene();
+            StartCoroutine(LoadNextSceneWithDelay());
         }
     }
-    void LoadNextScene()
+    // Coroutine 3-second delay
+    IEnumerator LoadNextSceneWithDelay()
     {
-        // Load the scene named "Scene VR"
-        SceneManager.LoadScene("Scene VR");
+        yield return new WaitForSeconds(4);  // Wait for 3 seconds
+        SceneManager.LoadScene("Scene VR");  // Load the scene named "Scene VR"
     }
 }
